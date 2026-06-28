@@ -1,0 +1,26 @@
+# Zavisnosti (Dependencies)
+node_modules/
+.pnpm-store/
+
+# Okruženje i tajne (Environment / Secrets)
+.env
+.env.local
+.env.*.local
+
+# Build i produkcija
+dist/
+build/
+.next/
+.nuxt/
+
+# Logovi
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Operativni sistemi i editori
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
