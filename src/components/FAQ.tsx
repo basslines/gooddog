@@ -38,20 +38,29 @@ function FAQItem({ q, a, isOpen, onClick }: { q: string; a: string; isOpen: bool
           {q}
         </span>
         <span
-          className="shrink-0 w-7 h-7 flex items-center justify-center rounded-full border transition-all duration-300"
+          className="shrink-0 w-7 h-7 flex items-center justify-center rounded-full border"
           style={{
             borderColor: isOpen ? '#214A32' : '#ccc',
             backgroundColor: isOpen ? '#214A32' : 'transparent',
+            transition: 'background-color 0.3s, border-color 0.3s',
           }}
         >
-          <svg className="w-3 h-3 transition-transform duration-300" fill="none" stroke={isOpen ? '#fff' : '#1D1D1B'} viewBox="0 0 24 24" strokeWidth={2.5}
-            style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          <svg
+            className="w-3 h-3"
+            fill="none"
+            stroke={isOpen ? '#fff' : '#1D1D1B'}
+            viewBox="0 0 24 24"
+            strokeWidth={2.5}
+            style={{ transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)', transition: 'transform 0.3s' }}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </span>
       </button>
-      <div className="overflow-hidden transition-all duration-300 ease-in-out"
-        style={{ maxHeight: isOpen ? '300px' : '0px', opacity: isOpen ? 1 : 0 }}>
+      <div
+        className="overflow-hidden"
+        style={{ maxHeight: isOpen ? '300px' : '0px', opacity: isOpen ? 1 : 0, transition: 'max-height 0.3s ease-in-out, opacity 0.3s ease-in-out' }}
+      >
         <p className="pb-6 pr-12 text-sm sm:text-base leading-relaxed" style={{ color: '#666', fontFamily: 'Inter, sans-serif', fontWeight: 300 }}>
           {a}
         </p>
@@ -85,7 +94,6 @@ export default function FAQ() {
           A few answers<br />before we meet.
         </h2>
 
-        {/* FAQ */}
         <div className="border-t" style={{ borderColor: '#e8e4dc' }}>
           {faqs.map((faq, i) => (
             <FAQItem key={i} q={faq.q} a={faq.a} isOpen={openIndex === i} onClick={() => toggle(i)} />

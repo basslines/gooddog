@@ -1,9 +1,4 @@
-const credentials = [
-  'Certified Professional Dog Trainer',
-  'Positive Reinforcement',
-  'Training at Home & Outdoors',
-  'Personalized Training Plans',
-];
+
 
 export default function Trainer() {
   return (
@@ -14,7 +9,7 @@ export default function Trainer() {
           {/* LEFT */}
           <div>
             <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-4" style={{ color: '#214A32' }}>
-              Meet the Trainer Behind
+              Good Dog Training
             </p>
             <h2 style={{
               fontFamily: 'Cormorant Garamond, serif',
@@ -23,7 +18,7 @@ export default function Trainer() {
               color: '#1D1D1B',
               lineHeight: 1.1,
             }} className="mb-5">
-              Good Dog Training
+              Meet your trainer
             </h2>
             <div className="w-10 h-px mb-8" style={{ backgroundColor: '#1D1D1B' }} />
 
@@ -37,18 +32,7 @@ export default function Trainer() {
               <p>My role isn&apos;t simply to train your dog. It&apos;s to give you the confidence and knowledge to continue long after our sessions are over.</p>
             </div>
 
-            <div className="border-t pt-8 mb-10" style={{ borderColor: '#e8e4dc' }}>
-              <ul className="space-y-3">
-                {credentials.map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm" style={{ color: '#444', fontFamily: 'Inter, sans-serif' }}>
-                    <svg className="w-4 h-4 shrink-0" fill="none" stroke="#214A32" viewBox="0 0 24 24" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            
 
             {/* Certificate */}
             <div className="inline-flex items-start gap-4 rounded-lg p-4 border" style={{ backgroundColor: '#fff', borderColor: '#e8e4dc' }}>
@@ -75,10 +59,7 @@ export default function Trainer() {
                 className="w-full h-full object-cover object-top"
               />
             </div>
-            <div className="absolute -bottom-5 left-5 px-6 py-4 shadow-xl" style={{ backgroundColor: '#214A32', color: '#fff' }}>
-              <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '2rem', fontWeight: 600 }}>5+</div>
-              <div className="text-xs tracking-widest uppercase mt-0.5" style={{ color: 'rgba(255,255,255,0.65)' }}>Years Training</div>
-            </div>
+            
           </div>
 
         </div>

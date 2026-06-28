@@ -17,9 +17,8 @@ const steps = [
   },
 ];
 
-const PHONE = '+971585806744';
-const WA_MESSAGE = encodeURIComponent("Hi! I'd like to book a training assessment for my dog.");
-const WA_URL = `https://wa.me/${PHONE}?text=${WA_MESSAGE}`;
+
+
 
 export default function HowItWorks() {
   return (
@@ -59,23 +58,7 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <div className="mt-14 sm:mt-20">
-          <a
-            href={WA_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 text-xs font-bold tracking-widest uppercase px-8 py-4 transition-opacity hover:opacity-90"
-            style={{ backgroundColor: '#214A32', color: '#fff' }}
-          >
-            Schedule Your Consultation
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-          <p className="mt-4 text-xs" style={{ color: '#999', fontFamily: 'Inter, sans-serif' }}>
-            No obligation. No pressure. Just honest advice.
-          </p>
-        </div>
+        
       </div>
     </section>
   );
