@@ -4,7 +4,7 @@ const WA_URL = `https://wa.me/${PHONE}?text=${WA_MESSAGE}`;
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 sm:py-28" style={{ backgroundColor: '#FAF8F4' }}>
+    <section id="contact" className="py-12 sm:py-20 lg:py-28" style={{ backgroundColor: "#FAF8F4" }}>
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <div className="grid lg:grid-cols-2 gap-14 xl:gap-24 items-start">
 
@@ -23,7 +23,7 @@ export default function Contact() {
               Let&apos;s talk about<br />your dog.
             </h2>
             <div className="w-10 h-px mb-8" style={{ backgroundColor: '#1D1D1B' }} />
-            <p className="text-sm sm:text-base leading-relaxed mb-10 max-w-sm" style={{ color: '#555', fontFamily: 'Inter, sans-serif', fontWeight: 300 }}>
+            <p className="text-sm sm:text-base leading-relaxed mb-6 lg:mb-10 max-w-sm" style={{ color: '#555', fontFamily: 'Inter, sans-serif', fontWeight: 300 }}>
               Reach out via WhatsApp or call us directly. We respond quickly and love answering questions before you commit to anything.
             </p>
             <a href={WA_URL} target="_blank" rel="noopener noreferrer"
@@ -37,7 +37,7 @@ export default function Contact() {
           </div>
 
           {/* Right — contact info */}
-          <div className="flex flex-col gap-5 mt-4 lg:mt-12">
+          <div className="flex flex-col gap-3 mt-4 lg:mt-12">
             {[
               {
                 icon: (

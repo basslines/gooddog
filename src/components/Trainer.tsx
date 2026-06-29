@@ -2,15 +2,19 @@
 
 export default function Trainer() {
   return (
-    <section id="about" className="py-20 sm:py-28" style={{ backgroundColor: '#FAF8F4' }}>
+    <section id="about" className="py-8 sm:py-20 lg:py-28" style={{ backgroundColor: "#FAF8F4" }}>
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 xl:gap-20 items-start">
 
           {/* LEFT */}
           <div>
-            <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-4" style={{ color: '#214A32' }}>
+            <p className="text-xs font-semibold tracking-[0.2em] mb-4" style={{ color: '#214A32' }}>
               Good Dog Training
             </p>
+            <div
+          className='w-10 h-px mb-4'
+          style={{ backgroundColor: '#1D1D1B' }}
+        />
             <h2 style={{
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: 'clamp(2.5rem, 6vw, 4rem)',
@@ -20,9 +24,9 @@ export default function Trainer() {
             }} className="mb-5">
               Meet your trainer
             </h2>
-            <div className="w-10 h-px mb-8" style={{ backgroundColor: '#1D1D1B' }} />
+            
 
-            <p style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(1.2rem, 2.5vw, 1.5rem)', fontWeight: 400, color: '#1D1D1B', lineHeight: 1.5 }} className="mb-8">
+            <p style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(1.2rem, 2.5vw, 1.5rem)', fontWeight: 400, color: '#1D1D1B', lineHeight: 1.5 }} className="mb-5 lg:mb-8">
               I believe successful dog training starts with understanding — not only your dog, but also your goals, your lifestyle, and the relationship you want to build together.
             </p>
 

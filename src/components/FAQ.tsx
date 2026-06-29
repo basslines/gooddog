@@ -78,19 +78,19 @@ export default function FAQ() {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section id="faq" className="py-20 sm:py-28" style={{ backgroundColor: '#F9F7F2' }}>
+    <section id="faq" className="py-12 sm:py-20 lg:py-28" style={{ backgroundColor: "#F9F7F2" }}>
       <div className="max-w-3xl mx-auto px-5 sm:px-8">
         <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-4" style={{ color: '#214A32' }}>
           A few answers before we meet.
         </p>
-        <div className="w-10 h-px mb-8" style={{ backgroundColor: '#1D1D1B' }} />
+        <div className="w-10 h-px mb-4" style={{ backgroundColor: '#1D1D1B' }} />
         <h2 style={{
           fontFamily: 'Cormorant Garamond, serif',
           fontSize: 'clamp(2.8rem, 7vw, 4.5rem)',
           fontWeight: 600,
           color: '#1D1D1B',
           lineHeight: 1.05,
-        }} className="mb-14">
+        }} className="mb-8 lg:mb-14">
           Questions I Often Hear
         </h2>
 
@@ -101,7 +101,7 @@ export default function FAQ() {
         </div>
 
         {/* CTA Card */}
-        <div className="mt-14 p-8 sm:p-12 text-center" style={{ backgroundColor: '#eef2ee', borderRadius: '4px' }}>
+        <div className="mt-8 p-6 sm:p-10 lg:p-12 text-center" style={{ backgroundColor: '#eef2ee', borderRadius: '4px' }}>
           <h3 style={{
             fontFamily: 'Cormorant Garamond, serif',
             fontSize: 'clamp(2rem, 5vw, 3rem)',

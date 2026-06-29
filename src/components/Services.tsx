@@ -214,8 +214,15 @@ export default function Services() {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section id="services" className="pt-8 pb-20 sm:pt-12 sm:pb-28 lg:py-28" style={{ backgroundColor: '#FAF8F4' }}>
+    <section id="services" className="pt-2 pb-4 sm:pt-10 sm:pb-20 lg:py-28" style={{ backgroundColor: '#FAF8F4' }}>
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
+        <p className="text-xs font-semibold tracking-[0.2em] mb-4" style={{ color: '#214A32' }}>
+              Good Dog Training
+            </p>
+            <div
+          className='w-10 h-px mb-4'
+          style={{ backgroundColor: '#1D1D1B' }}
+        />
         <h2
           style={{
             fontFamily: 'Cormorant Garamond, serif',
@@ -224,7 +231,7 @@ export default function Services() {
             color: '#1D1D1B',
             lineHeight: 1.0,
           }}
-          className="mb-12 sm:mb-16"
+          className="mb-4 sm:mb-12 lg:mb-16"
         >
           Services
         </h2>

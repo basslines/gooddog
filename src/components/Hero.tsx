@@ -32,7 +32,7 @@ export default function Hero() {
         {/* Tekst — ostatak ekrana */}
         <div className="flex-1 flex flex-col justify-center px-5 py-5">
           <p
-            className="text-xs font-semibold tracking-[0.2em] uppercase mb-3"
+            className="text-xs font-semibold tracking-[0.2em] uppercase mb-6"
             style={{ color: '#214A32' }}
           >
             Certified Professional Dog Trainer
@@ -45,15 +45,15 @@ export default function Hero() {
               lineHeight: 1.05,
               color: '#1D1D1B',
             }}
-            className="mb-3"
+            className="mb-6 mt-6"
           >
             Professional dog<br />
             training for{' '}
             <em style={{ color: '#214A32' }}>real life.</em>
           </h1>
-          <div className="w-8 h-px mb-3" style={{ backgroundColor: '#1D1D1B' }} />
+          <div className="w-8 h-px mb-6 mt-6" style={{ backgroundColor: '#1D1D1B' }} />
           <p
-            className="text-xs leading-relaxed mb-5"
+            className="text-xs leading-relaxed mb-5 mt-2"
             style={{ color: '#444', fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
           >
             Helping dogs and their owners enjoy a calmer, more confident everyday life through personalized positive reinforcement training.
@@ -63,7 +63,7 @@ export default function Hero() {
               href={WA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center text-xs font-bold tracking-widest uppercase px-6 py-3 w-full sm:w-auto transition-opacity hover:opacity-90"
+              className="inline-flex items-center justify-center text-xs font-bold tracking-widest uppercase px-6 py-3 mt-6 mb-6 w-full sm:w-auto transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#214A32', color: '#fff' }}
             >
               Book an Assessment
