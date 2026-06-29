@@ -81,7 +81,7 @@ export default function FAQ() {
     <section id="faq" className="py-20 sm:py-28" style={{ backgroundColor: '#F9F7F2' }}>
       <div className="max-w-3xl mx-auto px-5 sm:px-8">
         <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-4" style={{ color: '#214A32' }}>
-          Questions I Often Hear
+          A few answers before we meet.
         </p>
         <div className="w-10 h-px mb-8" style={{ backgroundColor: '#1D1D1B' }} />
         <h2 style={{
@@ -91,7 +91,7 @@ export default function FAQ() {
           color: '#1D1D1B',
           lineHeight: 1.05,
         }} className="mb-14">
-          A few answers<br />before we meet.
+          Questions I Often Hear
         </h2>
 
         <div className="border-t" style={{ borderColor: '#e8e4dc' }}>
