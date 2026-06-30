@@ -26,44 +26,65 @@ const faqs = [
 
 function FAQItem({ q, a, isOpen, onClick }: { q: string; a: string; isOpen: boolean; onClick: () => void }) {
   return (
-    <div className="border-b" style={{ borderColor: '#e8e4dc' }}>
-      <button className="w-full flex items-center justify-between gap-4 py-5 sm:py-6 text-left" onClick={onClick}>
-        <span style={{
-          fontFamily: 'Cormorant Garamond, serif',
-          fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)',
-          fontWeight: 600,
-          color: '#1D1D1B',
-          lineHeight: 1.3,
-        }}>
+    <div className="border-b transition-colors duration-300" style={{ borderColor: '#e8e4dc' }}>
+      <button 
+        className="w-full flex items-center justify-between gap-4 py-5 sm:py-6 text-left select-none group" 
+        onClick={onClick}
+      >
+        <span 
+          style={{
+            fontFamily: 'Cormorant Garamond, serif',
+            fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+            fontWeight: isOpen ? 600 : 500,
+            color: isOpen ? '#214A32' : '#1D1D1B',
+            lineHeight: 1.3,
+          }}
+          className="transition-colors duration-300 group-hover:text-[#214A32]"
+        >
           {q}
         </span>
+        
+        {/* Elegantni Plus / Minus indikator */}
         <span
-          className="shrink-0 w-7 h-7 flex items-center justify-center rounded-full border"
+          className="shrink-0 w-8 h-8 flex items-center justify-center rounded-full border transition-all duration-300"
           style={{
             borderColor: isOpen ? '#214A32' : '#ccc',
             backgroundColor: isOpen ? '#214A32' : 'transparent',
-            transition: 'background-color 0.3s, border-color 0.3s',
           }}
         >
           <svg
-            className="w-3 h-3"
+            className="w-3 h-3 transition-transform duration-300"
             fill="none"
             stroke={isOpen ? '#fff' : '#1D1D1B'}
             viewBox="0 0 24 24"
             strokeWidth={2.5}
-            style={{ transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)', transition: 'transform 0.3s' }}
+            style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            {isOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 12H5" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+            )}
           </svg>
         </span>
       </button>
+
+      {/* Ultra glatko otvaranje pomoću CSS Grida */}
       <div
-        className="overflow-hidden"
-        style={{ maxHeight: isOpen ? '300px' : '0px', opacity: isOpen ? 1 : 0, transition: 'max-height 0.3s ease-in-out, opacity 0.3s ease-in-out' }}
+        className="grid transition-all duration-300 ease-in-out"
+        style={{
+          gridTemplateRows: isOpen ? '1fr' : '0fr',
+          opacity: isOpen ? 1 : 0,
+        }}
       >
-        <p className="pb-6 pr-12 text-sm sm:text-base leading-relaxed" style={{ color: '#666', fontFamily: 'Inter, sans-serif', fontWeight: 300 }}>
-          {a}
-        </p>
+        <div className="overflow-hidden">
+          <p 
+            className="pb-6 pr-6 sm:pr-12 text-sm sm:text-base leading-relaxed" 
+            style={{ color: '#555', fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
+          >
+            {a}
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -78,19 +99,20 @@ export default function FAQ() {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section id="faq" className="py-12 sm:py-20 lg:py-28" style={{ backgroundColor: "#F9F7F2" }}>
+    <section id="faq" className="py-8 sm:py-24 lg:py-32" style={{ backgroundColor: "#FAF8F4" }}>
       <div className="max-w-3xl mx-auto px-5 sm:px-8">
-        <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-4" style={{ color: '#214A32' }}>
-          A few answers before we meet.
+        <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: '#214A32' }}>
+          Common Questions
         </p>
-        <div className="w-10 h-px mb-4" style={{ backgroundColor: '#1D1D1B' }} />
+        <div className="w-10 h-px mb-5" style={{ backgroundColor: '#1D1D1B' }} />
+        
         <h2 style={{
           fontFamily: 'Cormorant Garamond, serif',
-          fontSize: 'clamp(2.8rem, 7vw, 4.5rem)',
+          fontSize: 'clamp(2.5rem, 7vw, 4.5rem)',
           fontWeight: 600,
           color: '#1D1D1B',
-          lineHeight: 1.05,
-        }} className="mb-8 lg:mb-14">
+          lineHeight: 1.1,
+        }} className="mb-10 sm:mb-16">
           Questions I Often Hear
         </h2>
 
@@ -100,35 +122,47 @@ export default function FAQ() {
           ))}
         </div>
 
-        {/* CTA Card */}
-        <div className="mt-8 p-6 sm:p-10 lg:p-12 text-center" style={{ backgroundColor: '#eef2ee', borderRadius: '4px' }}>
+        {/* Premium Redizajnirana CTA Kartica */}
+        <div 
+          className="mt-16 p-8 sm:p-12 text-center rounded-2xl border shadow-sm transition-all duration-300 hover:shadow-md" 
+          style={{ backgroundColor: '#EFECE6', borderColor: '#e4dfd5' }}
+        >
           <h3 style={{
             fontFamily: 'Cormorant Garamond, serif',
-            fontSize: 'clamp(2rem, 5vw, 3rem)',
+            fontSize: 'clamp(2rem, 5vw, 2.8rem)',
             fontWeight: 600,
             color: '#1D1D1B',
+            lineHeight: 1.2,
           }} className="mb-4">
             Ready to take the first step?
           </h3>
-          <p className="text-sm sm:text-base mb-8 max-w-xs mx-auto leading-relaxed" style={{ color: '#666', fontFamily: 'Inter, sans-serif', fontWeight: 300 }}>
+          <p className="text-sm sm:text-base mb-8 max-w-sm mx-auto leading-relaxed" style={{ color: '#555', fontFamily: 'Inter, sans-serif', fontWeight: 300 }}>
             A calmer, more enjoyable life with your dog starts with one conversation.
           </p>
-          <a href={WA_URL} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 text-xs font-bold tracking-widest uppercase px-8 py-4 transition-opacity hover:opacity-90"
-            style={{ backgroundColor: '#214A32', color: '#fff' }}>
+          
+          <a 
+            href={WA_URL} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 text-xs font-bold tracking-widest uppercase px-8 py-4 rounded-lg transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            style={{ backgroundColor: '#214A32', color: '#fff', boxShadow: '0 4px 14px rgba(33, 74, 50, 0.2)' }}
+          >
             Schedule Your Consultation
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
-          <p className="mt-5 text-xs flex items-center justify-center gap-3" style={{ color: '#999' }}>
+          
+          {/* Suptilni bedževi ispod gumba */}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[11px] tracking-wider uppercase font-medium" style={{ color: '#777', fontFamily: 'Inter, sans-serif' }}>
             <span>No obligation</span>
-            <span className="w-1 h-1 rounded-full inline-block" style={{ backgroundColor: '#ccc' }} />
+            <span className="w-1 h-1 rounded-full hidden sm:inline-block" style={{ backgroundColor: '#214A32' }} />
             <span>No pressure</span>
-            <span className="w-1 h-1 rounded-full inline-block" style={{ backgroundColor: '#ccc' }} />
+            <span className="w-1 h-1 rounded-full hidden sm:inline-block" style={{ backgroundColor: '#214A32' }} />
             <span>Honest advice</span>
-          </p>
+          </div>
         </div>
+        
       </div>
     </section>
   );

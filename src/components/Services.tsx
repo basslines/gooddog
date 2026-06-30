@@ -6,7 +6,6 @@ const services = [
     title: 'Puppy Foundation Training',
     desc: 'Perfect for puppies up to 6 months of age and first-time dog owners. Together we\'ll build good habits from the very beginning and help your puppy grow into a confident, well-mannered companion.',
     subdesc: {
-      intro: '',
       listTitle: 'Training includes:',
       items: [
         'Toilet training',
@@ -22,7 +21,6 @@ const services = [
     title: 'Obedience Training',
     desc: 'Designed for dogs of all ages who need better everyday manners and clearer communication. We\'ll build reliable skills that make daily life easier, both at home and outdoors.',
     subdesc: {
-      intro: '',
       listTitle: 'Training includes:',
       items: [
         'Focus and engagement',
@@ -38,7 +36,6 @@ const services = [
     title: 'Behaviour Modification',
     desc: 'For dogs struggling with unwanted behaviours that affect everyday life. Every training plan is tailored to the individual dog, addressing the underlying cause rather than simply correcting the behaviour.',
     subdesc: {
-      intro: '',
       listTitle: 'Training includes:',
       items: [
         'Reactivity towards people or dogs',
@@ -54,7 +51,6 @@ const services = [
     title: 'Rescue & Adopted Dog Training',
     desc: 'Helping adopted dogs settle into their new home with patience, structure and understanding. Training is adapted to your dog\'s background, personality and pace of learning.',
     subdesc: {
-      intro: '',
       listTitle: 'Training includes:',
       items: [
         'Building trust and confidence',
@@ -70,7 +66,6 @@ const services = [
     title: 'Loose Leash Walking',
     desc: 'Turn stressful walks into calm, enjoyable time together. We\'ll teach your dog to walk comfortably by your side without pulling, while helping you understand how to maintain good walking habits.',
     subdesc: {
-      intro: '',
       listTitle: 'Training includes:',
       items: [
         'Loose leash walking',
@@ -86,7 +81,6 @@ const services = [
     title: 'Separation Anxiety Support',
     desc: 'Helping dogs feel more comfortable and relaxed when left alone. We\'ll work gradually, building your dog\'s confidence while giving you a clear, step-by-step plan to follow between sessions.',
     subdesc: {
-      intro: '',
       listTitle: 'Training includes:',
       items: [
         'Building independence',
@@ -105,104 +99,105 @@ function ServiceItem({
 }: {
   title: string;
   desc: string;
-  subdesc: { intro: string; listTitle: string; items: string[] };
+  subdesc: { listTitle: string; items: string[] };
   isOpen: boolean;
   onClick: () => void;
 }) {
   return (
     <div
-      className="border rounded-lg overflow-hidden transition-all duration-200"
+      className="border rounded-xl overflow-hidden transition-all duration-300 mb-4 shadow-sm"
       style={{
-        borderColor: '#e8e4dc',
-        backgroundColor: '#fff',
-        marginBottom: '12px',
+        borderColor: isOpen ? '#214A32' : '#e8e4dc',
+        backgroundColor: isOpen ? '#FDFDFD' : '#fff',
       }}
     >
-      {/* Always visible: title + desc + arrow */}
-      <div className="flex items-start justify-between gap-4 p-5 sm:p-6">
+      {/* Cijela gornja zona je klikabilna — savršeno za palac na iPhoneu */}
+      <div 
+        onClick={onClick}
+        className="flex items-start justify-between gap-4 p-5 sm:p-6 cursor-pointer select-none group"
+      >
         <div className="flex-1">
           <h3
             style={{
               fontFamily: 'Cormorant Garamond, serif',
-              fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+              fontSize: 'clamp(1.3rem, 4vw, 1.7rem)',
               fontWeight: 600,
               color: '#1D1D1B',
               lineHeight: 1.2,
-              marginBottom: '6px',
             }}
+            className="mb-2 group-hover:text-[#214A32] transition-colors"
           >
             {title}
           </h3>
           <p
-            className="text-sm leading-relaxed"
-            style={{ color: '#666', fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
+            className="text-xs sm:text-sm leading-relaxed"
+            style={{ color: '#555', fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
           >
             {desc}
           </p>
         </div>
 
-        {/* Arrow — identical to FAQ */}
-        <button
-          onClick={onClick}
-          className="shrink-0 mt-1"
-          aria-label={isOpen ? 'Collapse' : 'Expand'}
-        >
+        {/* Ikona Plus/Minus koja glatko rotira */}
+        <div className="shrink-0 mt-1">
           <span
-            className="w-7 h-7 flex items-center justify-center rounded-full border"
+            className="w-8 h-8 flex items-center justify-center rounded-full border transition-all duration-300"
             style={{
               borderColor: isOpen ? '#214A32' : '#ccc',
               backgroundColor: isOpen ? '#214A32' : 'transparent',
-              transition: 'background-color 0.3s, border-color 0.3s',
             }}
           >
             <svg
-              className="w-3 h-3"
+              className="w-3 h-3 transition-transform duration-300"
               fill="none"
               stroke={isOpen ? '#fff' : '#1D1D1B'}
               viewBox="0 0 24 24"
-              strokeWidth={2.5}
-              style={{ transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)', transition: 'transform 0.3s' }}
+              strokeWidth={3}
+              style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              {isOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 12H5" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+              )}
             </svg>
           </span>
-        </button>
+        </div>
       </div>
 
-      {/* Expandable subdesc with intro + bullet list */}
+      {/* Ultra glatka CSS Grid animacija otvaranja */}
       <div
-        className="overflow-hidden"
+        className="grid transition-all duration-300 ease-in-out"
         style={{
-          maxHeight: isOpen ? '600px' : '0px',
+          gridTemplateRows: isOpen ? '1fr' : '0fr',
           opacity: isOpen ? 1 : 0,
-          transition: 'max-height 0.3s ease-in-out, opacity 0.3s ease-in-out',
         }}
       >
-        <div className="px-5 sm:px-6 pb-7" style={{ borderTop: '1px solid #e8e4dc' }}>
-          <p
-            className="text-sm leading-relaxed pt-1 mb-5"
-            style={{ color: '#555', fontFamily: 'Inter, sans-serif', fontWeight: 300, lineHeight: 1.8 }}
-          >
-            {subdesc.intro}
-          </p>
-          <p
-            className="text-sm font-semibold mb-3"
-            style={{ color: '#1D1D1B', fontFamily: 'Inter, sans-serif' }}
-          >
-            {subdesc.listTitle}
-          </p>
-          <ul className="space-y-2">
-            {subdesc.items.map((item, i) => (
-              <li
-                key={i}
-                className="flex items-start gap-2.5 text-sm"
-                style={{ color: '#555', fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
-              >
-                <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: '#214A32' }} />
-                {item}
-              </li>
-            ))}
-          </ul>
+        <div className="overflow-hidden">
+          <div className="px-5 sm:px-6 pb-6 pt-2" style={{ borderTop: '1px solid #e8e4dc', backgroundColor: '#FAF8F4' }}>
+            <p
+              className="text-xs font-semibold tracking-wider uppercase mb-4"
+              style={{ color: '#214A32', fontFamily: 'Inter, sans-serif' }}
+            >
+              {subdesc.listTitle}
+            </p>
+            
+            {/* Grid u dva stupca na desktopu, jedan na mobitelu */}
+            <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-3">
+              {subdesc.items.map((item, i) => (
+                <li
+                  key={i}
+                  className="flex items-center gap-3 text-xs sm:text-sm"
+                  style={{ color: '#333', fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
+                >
+                  {/* Premium minimalistička kvačica */}
+                  <svg className="w-4 h-4 shrink-0" fill="none" stroke="#214A32" viewBox="0 0 24 24" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -214,29 +209,29 @@ export default function Services() {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section id="services" className="pt-2 pb-4 sm:pt-10 sm:pb-20 lg:py-28" style={{ backgroundColor: '#FAF8F4' }}>
-      <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <p className="text-xs font-semibold tracking-[0.2em] mb-4" style={{ color: '#214A32' }}>
-              Good Dog Training
-            </p>
-            <div
-          className='w-10 h-px mb-4'
+    <section id="services" className="py-8 sm:py-24 lg:py-32" style={{ backgroundColor: '#FAF8F4' }}>
+      <div className="max-w-4xl mx-auto px-5 sm:px-8"> {/* Smanjeno na max-w-4xl radi elegantnijeg skrola na desktopu */}
+        <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: '#214A32' }}>
+          Our Expertise
+        </p>
+        <div
+          className='w-10 h-px mb-5'
           style={{ backgroundColor: '#1D1D1B' }}
         />
         <h2
           style={{
             fontFamily: 'Cormorant Garamond, serif',
-            fontSize: 'clamp(3rem, 8vw, 5.5rem)',
+            fontSize: 'clamp(2.5rem, 7vw, 4.5rem)',
             fontWeight: 600,
             color: '#1D1D1B',
-            lineHeight: 1.0,
+            lineHeight: 1.1,
           }}
-          className="mb-4 sm:mb-12 lg:mb-16"
+          className="mb-10 sm:mb-16"
         >
-          Services
+          Training Services
         </h2>
 
-        <div>
+        <div className="space-y-3">
           {services.map((s, i) => (
             <ServiceItem
               key={i}
