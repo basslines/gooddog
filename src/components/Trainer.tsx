@@ -1,8 +1,14 @@
+'use client';
+
+// 1. Uvezi Next.js Image i samu sliku (prilagodi putanju ako je potrebno)
+import Image from "next/image";
+import trainerImg from "../../public/assets/trainer.jpg";
+
 export default function Trainer() {
   return (
     <section id="about" className="py-12 sm:py-20 lg:py-28" style={{ backgroundColor: "#FAF8F4" }}>
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <div className="grid lg:grid-cols-2 gap-10 xl:gap-20 items-center"> {/* Promijenjeno u items-center za bolji balans */}
+        <div className="grid lg:grid-cols-2 gap-10 xl:gap-20 items-center">
 
           {/* LEFT — Tekstualni sadržaj */}
           <div>
@@ -22,7 +28,6 @@ export default function Trainer() {
             }} className="mb-5">
               Meet your trainer
             </h2>
-            
 
             <p style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(1.2rem, 2.5vw, 1.5rem)', fontWeight: 400, color: '#1D1D1B', lineHeight: 1.5 }} className="mb-5 lg:mb-8">
               I believe successful dog training starts with understanding — not only your dog, but also your goals, your lifestyle, and the relationship you want to build together.
@@ -50,19 +55,23 @@ export default function Trainer() {
 
           {/* RIGHT — Fotografija s modernim detaljima */}
           <div className="relative mt-6 lg:mt-0 w-full group">
-            {/* Zaobljeni rubovi (rounded-xl) usklađeni s Hero sekcijom */}
-            <div className="overflow-hidden rounded-xl shadow-md lg:shadow-xl" style={{ height: 'clamp(380px, 55vw, 540px)' }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.unsplash.com/photo-1563550226561-2d346918575c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGRvZyUyMHRyYWluZXIlMjBibGFjayUyMGFuZCUyMHdoaXRlfGVufDB8MHwwfHx8Mg%3D%3D"
+            {/* Dodan je 'relative' na ovaj kontejner kako bi Next.js Image s 'fill' atributom znao gdje se smjestiti */}
+            <div 
+              className="relative overflow-hidden rounded-xl shadow-md lg:shadow-xl" 
+              style={{ height: 'clamp(380px, 55vw, 540px)' }}
+            >
+              <Image
+                src={trainerImg}
                 alt="Dog trainer with dog"
-                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
               />
             </div>
 
-            {/* Plutajući lokacijski bedž za premium izgled */}
+            {/* Plutajući lokacijski bedž */}
             <div 
-              className="absolute bottom-4 left-4 backdrop-blur-md bg-white/90 px-4 py-2 rounded-lg shadow-sm flex items-center gap-2 border border-white/20"
+              className="absolute bottom-4 left-4 backdrop-blur-md bg-white/90 px-4 py-2 rounded-lg shadow-sm flex items-center gap-2 border border-white/20 z-10"
             >
               <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#214A32' }}></span>
               <span className="text-xs font-semibold tracking-wider uppercase" style={{ color: '#1D1D1B', fontFamily: 'Inter, sans-serif' }}>

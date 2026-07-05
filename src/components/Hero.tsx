@@ -1,5 +1,9 @@
 'use client';
 
+import Image from "next/image";
+// 1. Uvezi sliku direktno (prilagodi putanju ako ti je struktura foldera drugačija)
+import heroImg from "../../public/assets/hero.jpg"; 
+
 const PHONE = '+971585806744';
 const WA_MESSAGE = encodeURIComponent("Hi! I'd like to book a training assessment for my dog.");
 const WA_URL = `https://wa.me/${PHONE}?text=${WA_MESSAGE}`;
@@ -11,18 +15,18 @@ export default function Hero() {
       className="pt-16 lg:pt-24"
     >
       <div className="max-w-4xl mx-auto px-5 lg:px-8">
-        
-        {/* SLIKA — Uvijek na vrhu, 100% širine, bez kropanja na svim uređajima */}
-        <div className="w-full rounded-xl overflow-hidden" style={{ backgroundColor: '#eee8da' }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="https://images.unsplash.com/photo-1697975303494-af9e6e5cb8b6?w=1200&auto=format&fit=crop&q=80"
+
+        {/* SLIKA */}
+        <div className="w-full rounded-xl overflow-hidden" style={{ backgroundColor: '#FAF8F4' }}>
+          <Image
+            src={heroImg} // 2. Proslijedi uvezeni objekt umjesto stringa
             alt="Dog trainer with owner and dog"
             className="w-full h-auto block"
+            priority // 3. Dodaj priority jer je ovo hero slika na vrhu stranice (ubrzava učitavanje)
           />
         </div>
 
-        {/* TEKST — Odmah ispod slike na svim ekranima */}
+        {/* TEKST */}
         <div className="flex flex-col pt-6 pb-12 lg:pb-20">
           <p
             className="text-xs font-semibold tracking-[0.2em] uppercase mb-3 lg:mb-4"
@@ -30,7 +34,7 @@ export default function Hero() {
           >
             Certified Professional Dog Trainer
           </p>
-          
+
           <h1
             style={{
               fontFamily: 'Cormorant Garamond, serif',
@@ -45,18 +49,17 @@ export default function Hero() {
             training for{' '}
             <em style={{ color: '#214A32' }}>real life.</em>
           </h1>
-          
+
           <div className="w-12 h-px mb-4 lg:mb-6" style={{ backgroundColor: '#1D1D1B' }} />
-          
+
           <p
             className="text-sm lg:text-lg leading-relaxed mb-6 lg:mb-8 max-w-2xl"
             style={{ color: '#444', fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
           >
-            Helping dogs and their owners enjoy a calmer, more confident everyday life through 
+            Helping dogs and their owners enjoy a calmer, more confident everyday life through
             personalized positive reinforcement training — at home, outdoors, and everywhere life happens.
           </p>
-          
-          {/* Gumbi */}
+
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <a
               href={WA_URL}
