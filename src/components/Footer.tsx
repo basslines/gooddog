@@ -79,10 +79,13 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+        {/* Sređeni donji dio s pravnim tekstom */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <p className="text-xs" style={{ color: 'rgba(255,255,255,0.2)' }}>
             © {new Date().getFullYear()} Good Dog Training. All rights reserved.
+          </p>
+          <p className="text-[11px] leading-relaxed max-w-md md:text-right" style={{ color: 'rgba(255,255,255,0.25)' }}>
+            Good Dog Training is operated by The Gentle Lead Dog Training Services L.l.c.-S.p.c.
           </p>
         </div>
       </div>
