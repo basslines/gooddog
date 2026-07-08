@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const PHONE = '+971585806744';
 const WA_MESSAGE = encodeURIComponent("Hi! I'd like to book a training assessment for my dog.");
 const WA_URL = `https://wa.me/${PHONE}?text=${WA_MESSAGE}`;
@@ -13,8 +11,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <Image src="/logo.png" alt="Good Dog Training" width={36} height={36}
-                className="rounded-full" style={{ filter: 'invert(1) brightness(10)', opacity: 0.5 }} />
+              {/* <Image src="/logo.png" alt="Good Dog Training" width={36} height={36}
+                className="rounded-full" style={{ filter: 'invert(1) brightness(10)', opacity: 0.5 }} /> */}
               <div style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                 <div className="font-bold text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>Good Dog Training</div>
               </div>
@@ -67,7 +65,7 @@ export default function Footer() {
                   <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                   </svg>
-                  info@gooddogtraining.ae
+                  thegooddogtraining.uae@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2 text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>

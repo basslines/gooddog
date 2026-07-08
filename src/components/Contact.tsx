@@ -56,8 +56,8 @@ export default function Contact() {
                   </svg>
                 ),
                 label: 'Email',
-                value: 'info@gooddogtraining.ae',
-                href: 'mailto:info@gooddogtraining.ae',
+                value: 'thegooddogtraining.uae@gmail.com',
+                href: 'mailto:thegooddogtraining.uae@gmail.com',
               },
               {
                 icon: (
