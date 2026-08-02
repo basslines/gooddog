@@ -121,7 +121,7 @@ export default function Footer() {
           </div>
           
           <p className="text-[11px] leading-relaxed max-w-md md:text-right" style={{ color: 'rgba(255,255,255,0.25)' }}>
-            Good Dog Training is operated by The Gentle Lead Dog Training Services L.l.c.-S.p.c.
+            Good Dog Training is operated by The Good Dog Training FZ-LLC
           </p>
         </div>
       </div>
@@ -164,9 +164,9 @@ export default function Footer() {
             <div className="mb-4 pb-2 border-b border-white/10"><h3 className="text-sm font-semibold uppercase tracking-wider text-white/90">Liability Waiver & Disclaimer</h3></div>
             <div className="space-y-3 text-xs text-white/60 leading-relaxed">
               <h4 className="font-semibold text-white/80">1. Nature of Canine Behavior</h4>
-              <p>The client acknowledges that working with dogs carries inherent risks of unpredictable behavior. Good Dog Training takes every precaution to ensure safety, but cannot fully control natural canine impulses.</p>
+              <p>The client acknowledges that working with dogs carries inherent risks of unpredictable behavior. The Good Dog Training FZ-LLC takes every precaution to ensure safety, but cannot fully control natural canine impulses.</p>
               <h4 className="font-semibold text-white/80">2. Indemnification</h4>
-              <p>Good Dog Training (operated by The Gentle Lead Dog Training Services L.L.C.-S.P.C.) and its trainers are strictly exempted from any legal or financial liability regarding property damage, personal injury, or third-party claims caused by the client&apos;s dog during or after the training program lifecycle.</p>
+              <p>Good Dog Training (operated by The Good Dog Training FZ-LLC) and its trainers are strictly exempted from any legal or financial liability regarding property damage, personal injury, or third-party claims caused by the client&apos;s dog during or after the training program lifecycle.</p>
               <h4 className="font-semibold text-white/80">3. Health & Vaccinations</h4>
               <p>The owner certifies that the dog is medically fit, fully vaccinated according to UAE regulations, and does not pose an undisclosed severe health risk to the trainer or other animals.</p>
             </div>
