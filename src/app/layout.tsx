@@ -11,6 +11,17 @@ export const metadata: Metadata = {
   description:
     'Professional in-home dog training in Abu Dhabi, UAE. Certified trainer using positive reinforcement methods. Book a free consultation today.',
 
+  keywords: [
+    'dog training Abu Dhabi',
+    'dog trainer Abu Dhabi',
+    'dog training UAE',
+    'dog trainer UAE',
+    'professional dog trainer Abu Dhabi',
+    'puppy training Abu Dhabi',
+    'dog behaviour training Abu Dhabi',
+    'in-home dog training Abu Dhabi',
+  ],
+
   alternates: {
     canonical: '/',
   },
