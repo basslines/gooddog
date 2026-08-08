@@ -6,6 +6,7 @@ export default function StructuredData() {
         '@type': 'LocalBusiness',
         '@id': 'https://gooddogtraining.ae/#business',
         name: 'Good Dog Training',
+        serviceType: 'Professional Dog Training',
         url: 'https://gooddogtraining.ae/',
         telephone: '+971585806744',
         description:
