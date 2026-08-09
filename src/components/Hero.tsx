@@ -23,6 +23,7 @@ export default function Hero() {
             alt="Dog trainer with owner and dog"
             className="w-full h-auto block"
             priority // 3. Dodaj priority jer je ovo hero slika na vrhu stranice (ubrzava učitavanje)
+            sizes="100vw"
           />
         </div>
 

@@ -40,6 +40,14 @@ export const metadata: Metadata = {
     siteName: 'Good Dog Training',
     locale: 'en_AE',
     type: 'website',
+    images: [
+      {
+        url: '/assets/trainer.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Good Dog Training — Certified Professional Dog Trainer in Abu Dhabi',
+      },
+    ],
   },
 
   twitter: {
