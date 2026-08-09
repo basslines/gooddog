@@ -46,10 +46,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/assets/trainer.jpg',
+        url: '/good_dog_preview.jpg',
         width: 1200,
         height: 630,
-        alt: 'Good Dog Training — Certified Professional Dog Trainer in Abu Dhabi',
+        alt: 'Good Dog Training — Abu Dhabi, UAE',
       },
     ],
   },
