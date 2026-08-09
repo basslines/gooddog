@@ -29,6 +29,7 @@ export default function StructuredData() {
         '@id': 'https://gooddogtraining.ae/#igor-zolkevic',
         name: 'Igor Žolkević',
         jobTitle: 'Certified Professional Dog Trainer',
+        sameAs: ['https://www.instagram.com/thegooddog.training'],
         worksFor: {
           '@id': 'https://gooddogtraining.ae/#business',
         },
