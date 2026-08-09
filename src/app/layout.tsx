@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     canonical: '/',
   },
 
+  icons: {
+    icon: '/icon.png',
+  },
+
   robots: {
     index: true,
     follow: true,
