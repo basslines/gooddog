@@ -9,6 +9,7 @@ export default function StructuredData() {
         serviceType: 'Professional Dog Training',
         url: 'https://gooddogtraining.ae/',
         telephone: '+971585806744',
+        priceRange: 'AED 299 - AED 5099',
         description:
           'Professional in-home dog training in Abu Dhabi, UAE. Certified trainer using positive reinforcement methods.',
         areaServed: {
