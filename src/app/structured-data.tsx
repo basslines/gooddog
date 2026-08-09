@@ -12,6 +12,7 @@ export default function StructuredData() {
         url: 'https://gooddogtraining.ae/',
         telephone: '+971585806744',
         priceRange: '$$',
+        image: 'https://gooddogtraining.ae/assets/trainer.jpg',
         description:
           'Professional in-home dog training in Abu Dhabi, UAE. Certified trainer using positive reinforcement methods.',
 
