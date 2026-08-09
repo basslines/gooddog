@@ -92,12 +92,12 @@ export default function StructuredData() {
       },
 
       // =====================================================
-      // SERVICES
+      // SERVICE 1 — PUPPY FOUNDATION TRAINING
       // =====================================================
-
       {
         '@type': 'Service',
-        '@id': 'https://gooddogtraining.ae/#puppy-foundation-training',
+        '@id':
+          'https://gooddogtraining.ae/#puppy-foundation-training',
         name: 'Puppy Foundation Training',
         description:
           'Training for puppies up to 6 months of age and first-time dog owners, focusing on good habits, confidence, socialisation and everyday skills.',
@@ -111,6 +111,9 @@ export default function StructuredData() {
         serviceType: 'Puppy Dog Training',
       },
 
+      // =====================================================
+      // SERVICE 2 — OBEDIENCE TRAINING
+      // =====================================================
       {
         '@type': 'Service',
         '@id': 'https://gooddogtraining.ae/#obedience-training',
@@ -127,9 +130,13 @@ export default function StructuredData() {
         serviceType: 'Dog Obedience Training',
       },
 
+      // =====================================================
+      // SERVICE 3 — BEHAVIOUR MODIFICATION
+      // =====================================================
       {
         '@type': 'Service',
-        '@id': 'https://gooddogtraining.ae/#behaviour-modification',
+        '@id':
+          'https://gooddogtraining.ae/#behaviour-modification',
         name: 'Behaviour Modification',
         description:
           'Personalized dog behaviour training addressing unwanted behaviours such as reactivity, excessive barking, fear, anxiety, jumping and resource guarding.',
@@ -143,9 +150,13 @@ export default function StructuredData() {
         serviceType: 'Dog Behaviour Modification',
       },
 
+      // =====================================================
+      // SERVICE 4 — RESCUE & ADOPTED DOG TRAINING
+      // =====================================================
       {
         '@type': 'Service',
-        '@id': 'https://gooddogtraining.ae/#rescue-adopted-dog-training',
+        '@id':
+          'https://gooddogtraining.ae/#rescue-adopted-dog-training',
         name: 'Rescue & Adopted Dog Training',
         description:
           'Personalized training for rescue and adopted dogs focused on building trust, confidence, healthy routines, socialisation and basic obedience.',
@@ -159,9 +170,13 @@ export default function StructuredData() {
         serviceType: 'Rescue Dog Training',
       },
 
+      // =====================================================
+      // SERVICE 5 — LOOSE LEASH WALKING
+      // =====================================================
       {
         '@type': 'Service',
-        '@id': 'https://gooddogtraining.ae/#loose-leash-walking',
+        '@id':
+          'https://gooddogtraining.ae/#loose-leash-walking',
         name: 'Loose Leash Walking',
         description:
           'Training that helps dogs walk calmly and comfortably without pulling while improving focus, engagement and behaviour around distractions.',
@@ -175,9 +190,13 @@ export default function StructuredData() {
         serviceType: 'Loose Leash Dog Training',
       },
 
+      // =====================================================
+      // SERVICE 6 — SEPARATION ANXIETY SUPPORT
+      // =====================================================
       {
         '@type': 'Service',
-        '@id': 'https://gooddogtraining.ae/#separation-anxiety-support',
+        '@id':
+          'https://gooddogtraining.ae/#separation-anxiety-support',
         name: 'Separation Anxiety Support',
         description:
           'Step-by-step support helping dogs become more comfortable when left alone through independence training, calm routines and gradual home training.',
@@ -195,7 +214,7 @@ export default function StructuredData() {
 
   return (
     <script
-      type='application/ld+json'
+      type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(structuredData),
       }}
