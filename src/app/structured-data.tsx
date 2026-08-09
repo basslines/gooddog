@@ -11,6 +11,7 @@ export default function StructuredData() {
         name: 'Good Dog Training',
         url: 'https://gooddogtraining.ae/',
         telephone: '+971585806744',
+        priceRange: '$$',
         description:
           'Professional in-home dog training in Abu Dhabi, UAE. Certified trainer using positive reinforcement methods.',
 
