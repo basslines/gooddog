@@ -79,7 +79,8 @@ export default function StructuredData() {
         '@type': 'WebPage',
         '@id': 'https://gooddogtraining.ae/#webpage',
         url: 'https://gooddogtraining.ae/',
-        name: 'Good Dog Training | Certified Professional Dog Trainer — Abu Dhabi, UAE',
+        name:
+          'Good Dog Training | Certified Professional Dog Trainer — Abu Dhabi, UAE',
         description:
           'Professional in-home dog training in Abu Dhabi, UAE. Certified trainer using positive reinforcement methods.',
         isPartOf: {
@@ -208,6 +209,61 @@ export default function StructuredData() {
           name: 'Abu Dhabi',
         },
         serviceType: 'Dog Separation Anxiety Support',
+      },
+
+      // =====================================================
+      // FAQ PAGE
+      // =====================================================
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://gooddogtraining.ae/#faq',
+        url: 'https://gooddogtraining.ae/#faq',
+        name: 'Frequently Asked Questions | Good Dog Training',
+        isPartOf: {
+          '@id': 'https://gooddogtraining.ae/#webpage',
+        },
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Do you train at my home?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes. All training takes place in your home and in real-life environments where your dog lives and experiences everyday situations. This helps create lasting results that truly fit your lifestyle.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Do I need to be present during training?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: "Yes, and that's intentional. Your involvement is essential — you're the one who lives with your dog every day. I'll guide you through every technique so you can continue reinforcing good behaviour between sessions and long after training ends.",
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How many sessions will my dog need?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: "Every dog is different. After an initial assessment, I'll recommend a program tailored to your dog's specific needs, your goals, and your lifestyle. Some dogs make significant progress in just a few sessions; others benefit from a longer program.",
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Do you use positive reinforcement?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, exclusively. I use modern, science-based positive reinforcement methods — no choke chains, no shock collars, no punishment. Only clear communication, consistency, and reward-based techniques that build a strong relationship between you and your dog.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Can you help rescue and adopted dogs?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Absolutely. Rescue dogs often need extra patience and a gentle approach, especially if they carry past trauma or anxiety. I have experience working with dogs from difficult backgrounds and will design a program that builds trust and confidence at a pace that suits your dog.',
+            },
+          },
+        ],
       },
     ],
   };

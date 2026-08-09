@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="w-full rounded-xl overflow-hidden" style={{ backgroundColor: '#FAF8F4' }}>
           <Image
             src={heroImg} // 2. Proslijedi uvezeni objekt umjesto stringa
-            alt="Dog trainer with owner and dog"
+            alt="Professional dog trainer working with a dog and owner"
             className="w-full h-auto block"
             priority // 3. Dodaj priority jer je ovo hero slika na vrhu stranice (ubrzava učitavanje)
             sizes="100vw"
