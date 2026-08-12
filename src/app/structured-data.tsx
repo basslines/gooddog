@@ -6,7 +6,7 @@ export default function StructuredData() {
       // LOCAL BUSINESS
       // =====================================================
       {
-        '@type': 'LocalBusiness',
+        '@type': ['LocalBusiness', 'ProfessionalService'],
         '@id': 'https://gooddogtraining.ae/#business',
         name: 'Good Dog Training',
         url: 'https://gooddogtraining.ae/',
@@ -17,10 +17,23 @@ export default function StructuredData() {
         description:
           'Professional in-home dog training in Abu Dhabi, UAE. Certified trainer using positive reinforcement methods.',
 
-        areaServed: {
-          '@type': 'City',
-          name: 'Abu Dhabi',
-        },
+        // Matches exactly the Service Area list configured on the client's
+        // Google Business Profile.
+        areaServed: [
+          { '@id': 'https://gooddogtraining.ae/#area-abudhabi-city' },
+          { '@id': 'https://gooddogtraining.ae/#area-al-reef' },
+          { '@id': 'https://gooddogtraining.ae/#area-al-bateen' },
+          { '@id': 'https://gooddogtraining.ae/#area-al-mushrif' },
+          { '@id': 'https://gooddogtraining.ae/#area-yas-island' },
+          { '@id': 'https://gooddogtraining.ae/#area-khalifa-city' },
+          { '@id': 'https://gooddogtraining.ae/#area-al-khalidiyah' },
+          { '@id': 'https://gooddogtraining.ae/#area-al-reem-island' },
+          { '@id': 'https://gooddogtraining.ae/#area-al-raha-al-bandar' },
+          { '@id': 'https://gooddogtraining.ae/#area-al-raha-al-muneera' },
+          { '@id': 'https://gooddogtraining.ae/#area-mohamed-bin-zayed-city' },
+          { '@id': 'https://gooddogtraining.ae/#area-shati-al-raha-al-zeina' },
+          { '@id': 'https://gooddogtraining.ae/#area-saadiyat-island' },
+        ],
 
         address: {
           '@type': 'PostalAddress',
@@ -28,11 +41,122 @@ export default function StructuredData() {
           addressCountry: 'AE',
         },
 
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+971585806744',
+          contactType: 'customer service',
+          areaServed: 'AE',
+          availableLanguage: ['en', 'ar'],
+        },
+
         founder: {
           '@id': 'https://gooddogtraining.ae/#igor-zolkevic',
         },
 
+        // Links the business entity directly to all 6 services so Google
+        // can associate the LocalBusiness with each offer, not just the
+        // other way around.
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Dog Training Services',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: { '@id': 'https://gooddogtraining.ae/#puppy-foundation-training' },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: { '@id': 'https://gooddogtraining.ae/#obedience-training' },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: { '@id': 'https://gooddogtraining.ae/#behaviour-modification' },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: { '@id': 'https://gooddogtraining.ae/#rescue-adopted-dog-training' },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: { '@id': 'https://gooddogtraining.ae/#loose-leash-walking' },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: { '@id': 'https://gooddogtraining.ae/#separation-anxiety-support' },
+            },
+          ],
+        },
+
         sameAs: ['https://www.instagram.com/thegooddog.training'],
+      },
+
+      // =====================================================
+      // SERVICE AREAS (defined once, referenced everywhere above)
+      // =====================================================
+      {
+        '@type': 'City',
+        '@id': 'https://gooddogtraining.ae/#area-abudhabi-city',
+        name: 'Abu Dhabi',
+      },
+      {
+        '@type': 'Place',
+        '@id': 'https://gooddogtraining.ae/#area-al-reef',
+        name: 'Al Reef, Abu Dhabi',
+      },
+      {
+        '@type': 'Place',
+        '@id': 'https://gooddogtraining.ae/#area-al-bateen',
+        name: 'Al Bateen, Abu Dhabi',
+      },
+      {
+        '@type': 'Place',
+        '@id': 'https://gooddogtraining.ae/#area-al-mushrif',
+        name: 'Al Mushrif, Abu Dhabi',
+      },
+      {
+        '@type': 'Place',
+        '@id': 'https://gooddogtraining.ae/#area-yas-island',
+        name: 'Yas Island, Abu Dhabi',
+      },
+      {
+        '@type': 'Place',
+        '@id': 'https://gooddogtraining.ae/#area-khalifa-city',
+        name: 'Khalifa City, Abu Dhabi',
+      },
+      {
+        '@type': 'Place',
+        '@id': 'https://gooddogtraining.ae/#area-al-khalidiyah',
+        name: 'Al Khalidiyah, Abu Dhabi',
+      },
+      {
+        '@type': 'Place',
+        '@id': 'https://gooddogtraining.ae/#area-al-reem-island',
+        name: 'Al Reem Island, Abu Dhabi',
+      },
+      {
+        '@type': 'Place',
+        '@id': 'https://gooddogtraining.ae/#area-al-raha-al-bandar',
+        name: 'Al Raha - Al Bandar, Abu Dhabi',
+      },
+      {
+        '@type': 'Place',
+        '@id': 'https://gooddogtraining.ae/#area-al-raha-al-muneera',
+        name: 'Al Raha - Al Muneera, Abu Dhabi',
+      },
+      {
+        '@type': 'Place',
+        '@id': 'https://gooddogtraining.ae/#area-mohamed-bin-zayed-city',
+        name: 'Mohamed Bin Zayed City, Abu Dhabi',
+      },
+      {
+        '@type': 'Place',
+        '@id': 'https://gooddogtraining.ae/#area-shati-al-raha-al-zeina',
+        name: 'Shati Al Raha - Al Zeina, Abu Dhabi',
+      },
+      {
+        '@type': 'Place',
+        '@id': 'https://gooddogtraining.ae/#area-saadiyat-island',
+        name: 'Saadiyat Island, Abu Dhabi',
       },
 
       // =====================================================
@@ -79,8 +203,7 @@ export default function StructuredData() {
         '@type': 'WebPage',
         '@id': 'https://gooddogtraining.ae/#webpage',
         url: 'https://gooddogtraining.ae/',
-        name:
-          'Good Dog Training | Certified Professional Dog Trainer — Abu Dhabi, UAE',
+        name: 'Good Dog Training | Certified Professional Dog Trainer — Abu Dhabi, UAE',
         description:
           'Professional in-home dog training in Abu Dhabi, UAE. Certified trainer using positive reinforcement methods.',
         isPartOf: {
@@ -89,7 +212,32 @@ export default function StructuredData() {
         about: {
           '@id': 'https://gooddogtraining.ae/#business',
         },
+        breadcrumb: {
+          '@id': 'https://gooddogtraining.ae/#breadcrumb',
+        },
         inLanguage: 'en-AE',
+      },
+
+      // =====================================================
+      // BREADCRUMB (helps Google understand site structure)
+      // =====================================================
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://gooddogtraining.ae/#breadcrumb',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://gooddogtraining.ae/',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Dog Trainer Abu Dhabi',
+            item: 'https://gooddogtraining.ae/#services',
+          },
+        ],
       },
 
       // =====================================================
@@ -97,8 +245,7 @@ export default function StructuredData() {
       // =====================================================
       {
         '@type': 'Service',
-        '@id':
-          'https://gooddogtraining.ae/#puppy-foundation-training',
+        '@id': 'https://gooddogtraining.ae/#puppy-foundation-training',
         name: 'Puppy Foundation Training',
         description:
           'Training for puppies up to 6 months of age and first-time dog owners, focusing on good habits, confidence, socialisation and everyday skills.',
@@ -106,8 +253,7 @@ export default function StructuredData() {
           '@id': 'https://gooddogtraining.ae/#business',
         },
         areaServed: {
-          '@type': 'City',
-          name: 'Abu Dhabi',
+          '@id': 'https://gooddogtraining.ae/#area-abudhabi-city',
         },
         serviceType: 'Puppy Dog Training',
       },
@@ -125,8 +271,7 @@ export default function StructuredData() {
           '@id': 'https://gooddogtraining.ae/#business',
         },
         areaServed: {
-          '@type': 'City',
-          name: 'Abu Dhabi',
+          '@id': 'https://gooddogtraining.ae/#area-abudhabi-city',
         },
         serviceType: 'Dog Obedience Training',
       },
@@ -136,8 +281,7 @@ export default function StructuredData() {
       // =====================================================
       {
         '@type': 'Service',
-        '@id':
-          'https://gooddogtraining.ae/#behaviour-modification',
+        '@id': 'https://gooddogtraining.ae/#behaviour-modification',
         name: 'Behaviour Modification',
         description:
           'Personalized dog behaviour training addressing unwanted behaviours such as reactivity, excessive barking, fear, anxiety, jumping and resource guarding.',
@@ -145,8 +289,7 @@ export default function StructuredData() {
           '@id': 'https://gooddogtraining.ae/#business',
         },
         areaServed: {
-          '@type': 'City',
-          name: 'Abu Dhabi',
+          '@id': 'https://gooddogtraining.ae/#area-abudhabi-city',
         },
         serviceType: 'Dog Behaviour Modification',
       },
@@ -156,8 +299,7 @@ export default function StructuredData() {
       // =====================================================
       {
         '@type': 'Service',
-        '@id':
-          'https://gooddogtraining.ae/#rescue-adopted-dog-training',
+        '@id': 'https://gooddogtraining.ae/#rescue-adopted-dog-training',
         name: 'Rescue & Adopted Dog Training',
         description:
           'Personalized training for rescue and adopted dogs focused on building trust, confidence, healthy routines, socialisation and basic obedience.',
@@ -165,8 +307,7 @@ export default function StructuredData() {
           '@id': 'https://gooddogtraining.ae/#business',
         },
         areaServed: {
-          '@type': 'City',
-          name: 'Abu Dhabi',
+          '@id': 'https://gooddogtraining.ae/#area-abudhabi-city',
         },
         serviceType: 'Rescue Dog Training',
       },
@@ -176,8 +317,7 @@ export default function StructuredData() {
       // =====================================================
       {
         '@type': 'Service',
-        '@id':
-          'https://gooddogtraining.ae/#loose-leash-walking',
+        '@id': 'https://gooddogtraining.ae/#loose-leash-walking',
         name: 'Loose Leash Walking',
         description:
           'Training that helps dogs walk calmly and comfortably without pulling while improving focus, engagement and behaviour around distractions.',
@@ -185,8 +325,7 @@ export default function StructuredData() {
           '@id': 'https://gooddogtraining.ae/#business',
         },
         areaServed: {
-          '@type': 'City',
-          name: 'Abu Dhabi',
+          '@id': 'https://gooddogtraining.ae/#area-abudhabi-city',
         },
         serviceType: 'Loose Leash Dog Training',
       },
@@ -196,8 +335,7 @@ export default function StructuredData() {
       // =====================================================
       {
         '@type': 'Service',
-        '@id':
-          'https://gooddogtraining.ae/#separation-anxiety-support',
+        '@id': 'https://gooddogtraining.ae/#separation-anxiety-support',
         name: 'Separation Anxiety Support',
         description:
           'Step-by-step support helping dogs become more comfortable when left alone through independence training, calm routines and gradual home training.',
@@ -205,8 +343,7 @@ export default function StructuredData() {
           '@id': 'https://gooddogtraining.ae/#business',
         },
         areaServed: {
-          '@type': 'City',
-          name: 'Abu Dhabi',
+          '@id': 'https://gooddogtraining.ae/#area-abudhabi-city',
         },
         serviceType: 'Dog Separation Anxiety Support',
       },
@@ -271,9 +408,7 @@ export default function StructuredData() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(structuredData),
-      }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
     />
   );
 }
