@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import StructuredData from './structured-data';
 
@@ -81,7 +82,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        {/* Structured Data / SEO */}
         <StructuredData />
+
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z2B9797LMZ"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-Z2B9797LMZ');
+          `}
+        </Script>
+
         {children}
       </body>
     </html>
