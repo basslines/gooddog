@@ -47,8 +47,8 @@ export default function Hero() {
             className="mb-4"
           >
             Professional dog<br />
-            training for{' '}
-            <em style={{ color: '#214A32' }}>real life.</em>
+            trainer in{' '}
+            <em style={{ color: '#214A32' }}>Abu Dhabi.</em>
           </h1>
 
           <div className="w-12 h-px mb-4 lg:mb-6" style={{ backgroundColor: '#1D1D1B' }} />
@@ -68,8 +68,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center text-xs font-bold tracking-widest uppercase px-8 py-4 w-full sm:w-auto transition-opacity hover:opacity-90"
               style={{ backgroundColor: '#214A32', color: '#fff' }}
-            >
-              Book an Assessment
+            >⁠Book a free 15 minutes call
             </a>
             <a
               href="#how-it-works"
