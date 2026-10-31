@@ -48,7 +48,7 @@ export default function Hero() {
           >
             Professional dog<br />
             trainer in{' '}
-            <em style={{ color: '#214A32' }}>Abu Dhabi.</em>
+            <span style={{ color: '#214A32' }}>Abu Dhabi</span>
           </h1>
 
           <div className="w-12 h-px mb-4 lg:mb-6" style={{ backgroundColor: '#1D1D1B' }} />

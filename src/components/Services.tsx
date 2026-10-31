@@ -4,7 +4,7 @@ import { useState } from 'react';
 const services = [
   {
     title: 'Puppy Foundation Training',
-    desc: 'Perfect for puppies up to 6 months of age and first-time dog owners. Together we\'ll build good habits from the very beginning and help your puppy grow into a confident, well-mannered companion.',
+    desc: 'Bringing a puppy home is exciting, but it can also feel a little overwhelming. We’ll help you get off to the right start, with clear routines, practical guidance and positive training that fits naturally into everyday life. Along the way, you’ll learn how to understand your puppy, build good habits and create a strong foundation for the years ahead.',
     subdesc: {
       listTitle: 'Training includes:',
       items: [
@@ -19,7 +19,7 @@ const services = [
   },
   {
     title: 'Obedience Training',
-    desc: 'Designed for dogs of all ages who need better everyday manners and clearer communication. We\'ll build reliable skills that make daily life easier, both at home and outdoors.',
+    desc: 'Designed for dogs of all ages who need better everyday manners and clearer communication. We’ll build reliable skills that make daily life easier, both at home and outdoors. You’ll also learn how to keep your dog engaged, reinforce good behaviour and continue practising effectively between sessions.',
     subdesc: {
       listTitle: 'Training includes:',
       items: [
@@ -34,7 +34,7 @@ const services = [
   },
   {
     title: 'Behaviour Modification',
-    desc: 'For dogs struggling with unwanted behaviours that affect everyday life. Every training plan is tailored to the individual dog, addressing the underlying cause rather than simply correcting the behaviour.',
+    desc: 'For dogs struggling with behaviours such as reactivity, excessive barking, fear, anxiety, jumping or resource guarding. We’ll look beyond the behaviour itself to understand what may be causing it, then develop a practical, positive reinforcement-based plan to help your dog respond more calmly and confidently in everyday situations.',
     subdesc: {
       listTitle: 'Training includes:',
       items: [
@@ -49,7 +49,7 @@ const services = [
   },
   {
     title: 'Rescue & Adopted Dog Training',
-    desc: 'Helping adopted dogs settle into their new home with patience, structure and understanding. Training is adapted to your dog\'s background, personality and pace of learning.',
+    desc: 'Designed to help rescue and adopted dogs adjust to their new home and build trust, confidence and everyday skills. Training is adapted to your dog’s individual needs, previous experiences and pace of learning. We’ll focus on creating clear routines, positive experiences and a stronger relationship between you and your dog.',
     subdesc: {
       listTitle: 'Training includes:',
       items: [
@@ -64,7 +64,7 @@ const services = [
   },
   {
     title: 'Loose Leash Walking',
-    desc: 'Turn stressful walks into calm, enjoyable time together. We\'ll teach your dog to walk comfortably by your side without pulling, while helping you understand how to maintain good walking habits.',
+    desc: 'For dogs that pull on the leash, lose focus or become difficult to manage around everyday distractions. We’ll work on engagement, communication and calm walking skills in real-life environments. You’ll learn practical techniques to make walks more relaxed, enjoyable and manageable for both you and your dog.',
     subdesc: {
       listTitle: 'Training includes:',
       items: [
@@ -79,7 +79,7 @@ const services = [
   },
   {
     title: 'Separation Anxiety Support',
-    desc: 'Helping dogs feel more comfortable and relaxed when left alone. We\'ll work gradually, building your dog\'s confidence while giving you a clear, step-by-step plan to follow between sessions.',
+    desc: 'For dogs that struggle to remain calm and comfortable when left alone. We’ll look at your dog’s behaviour, daily routine and individual triggers, then develop a gradual training plan focused on building independence and confidence. You’ll learn how to practise calm departures and help your dog become more comfortable with time alone.',
     subdesc: {
       listTitle: 'Training includes:',
       items: [

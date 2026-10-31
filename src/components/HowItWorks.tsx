@@ -7,7 +7,7 @@ const steps = [
   },
   {
     title: 'Assessment',
-    desc: "I'll assess your dog in the environment where everyday life happens and create a personalized training plan.",
+    desc: "We'll assess your dog in the environment where everyday life happens and create a personalized training plan.",
   },
   {
     title: 'Training',
@@ -54,7 +54,7 @@ export default function HowItWorks() {
         <div className='relative flex flex-col'>
           {/* Fina vertikalna linija koja vodi oko kroz korake */}
           <div 
-            className='absolute left-[18px] sm:left-[26px] top-3 bottom-3 w-px opacity-30'
+            className='absolute left-4.5 sm:left-6.5 top-3 bottom-3 w-px opacity-30'
             style={{ backgroundColor: '#214A32' }}
           />
 

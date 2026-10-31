@@ -1,20 +1,20 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const PHONE = '+971585806744';
 const WA_MESSAGE = encodeURIComponent(
   "Hi! I'd like to book a training assessment for my dog.",
 );
 const WA_URL = `https://wa.me/${PHONE}?text=${WA_MESSAGE}`;
+const IG_URL = 'https://www.instagram.com/thegooddog.training';
 
 export default function Footer() {
-  // Stanja za sva tri modala
   const [openPrivacy, setOpenPrivacy] = useState(false);
   const [openTerms, setOpenTerms] = useState(false);
   const [openLiability, setOpenLiability] = useState(false);
 
-  // Blokiranje skrolovanja pozadine ako je bilo koji modal otvoren
   useEffect(() => {
     if (openPrivacy || openTerms || openLiability) {
       document.body.style.overflow = 'hidden';
@@ -32,11 +32,12 @@ export default function Footer() {
       className='py-14'
     >
       <div className='max-w-6xl mx-auto px-5 sm:px-8'>
+        {/* Main grid */}
         <div
           className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b'
           style={{ borderColor: 'rgba(255,255,255,0.08)' }}
         >
-          {/* Brand */}
+          {/* Brand + Instagram */}
           <div className='col-span-2 sm:col-span-2 lg:col-span-1'>
             <div className='flex items-center gap-3 mb-4'>
               <div style={{ fontFamily: 'Cormorant Garamond, serif' }}>
@@ -49,13 +50,29 @@ export default function Footer() {
               </div>
             </div>
             <p
-              className='text-xs leading-relaxed'
+              className='text-xs leading-relaxed mb-5'
               style={{ color: 'rgba(255,255,255,0.3)' }}
             >
               Training designed for your dog.
               <br />
               Delivered in your home.
             </p>
+            <a
+              href={IG_URL}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='inline-flex items-center gap-2 text-xs hover:opacity-80 transition-opacity'
+              style={{ color: 'rgba(255,255,255,0.5)' }}
+            >
+              <svg
+                className='w-4 h-4 shrink-0'
+                fill='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z' />
+              </svg>
+              @thegooddoodtraining
+            </a>
           </div>
 
           {/* Services */}
@@ -114,7 +131,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Get In Touch */}
           <div>
             <div
               className='text-xs font-semibold tracking-widest uppercase mb-5'
@@ -143,7 +160,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href='mailto:info@gooddogtraining.ae'
+                  href='mailto:thegooddogtraining.uae@gmail.com'
                   className='flex items-center gap-2 text-xs hover:opacity-80 transition-opacity'
                   style={{ color: 'rgba(255,255,255,0.5)' }}
                 >
@@ -157,7 +174,7 @@ export default function Footer() {
                     <path
                       strokeLinecap='round'
                       strokeLinejoin='round'
-                      d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25 2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'
+                      d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75'
                     />
                   </svg>
                   thegooddogtraining.uae@gmail.com
@@ -191,7 +208,68 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Donji dio sa tri pravna linka */}
+        {/* Partner traka */}
+        <div
+          className='py-5 border-b flex flex-col sm:flex-row items-center justify-between gap-3'
+          style={{ borderColor: 'rgba(255,255,255,0.08)' }}
+        >
+          <p
+            className='text-xs tracking-widest uppercase font-medium'
+            style={{ color: 'rgba(255,255,255,0.45)' }}
+          >
+            In partnership with
+          </p>
+          <a
+            href='https://www.gritncode.com/partnership'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='inline-flex items-center gap-2.5 px-3.5 py-2 rounded-md transition-all hover:bg-white/4'
+            style={{ border: '1px solid rgba(255,255,255,0.1)' }}
+          >
+            {/* Logo kontejner: Ikona + Tipografija */}
+            <div className='flex items-center gap-2 h-5'>
+              {/* Prva slika */}
+              <div className='relative h-full w-5'>
+                <Image
+                  src='/1.avif'
+                  alt='Grit & Code Icon'
+                  fill
+                  sizes='20px'
+                  className='object-contain'
+                />
+              </div>
+
+              {/* Druga slika */}
+              <div className='relative h-full w-20'>
+                <Image
+                  src='/2.avif'
+                  alt='GRITNCODE'
+                  fill
+                  sizes='80px'
+                  className='object-contain brightness-125'
+                />
+              </div>
+            </div>
+
+            {/* Eksterna strelica */}
+            <svg
+              className='w-3.5 h-3.5 ml-1'
+              fill='none'
+              stroke='currentColor'
+              strokeWidth={1.75}
+              viewBox='0 0 24 24'
+              style={{ color: 'rgba(255,255,255,0.5)' }}
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                d='M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25'
+              />
+            </svg>
+          </a>
+        </div>
+
+        {/* Copyright + legal */}
         <div className='pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left'>
           <div className='flex flex-col sm:flex-row items-center gap-2 sm:gap-4'>
             <p className='text-xs' style={{ color: 'rgba(255,255,255,0.2)' }}>
@@ -204,8 +282,6 @@ export default function Footer() {
             >
               |
             </span>
-
-            {/* Pravni linkovi */}
             <div className='flex gap-3 text-[11px] sm:text-xs'>
               <button
                 onClick={() => setOpenPrivacy(true)}
@@ -232,7 +308,6 @@ export default function Footer() {
               </button>
             </div>
           </div>
-
           <p
             className='text-[11px] leading-relaxed max-w-md md:text-right'
             style={{ color: 'rgba(255,255,255,0.25)' }}
@@ -242,7 +317,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ================= MODAL 1: PRIVACY POLICY ================= */}
+      {/* MODAL: PRIVACY */}
       {openPrivacy && (
         <div
           className='fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm'
@@ -289,7 +364,7 @@ export default function Footer() {
         </div>
       )}
 
-      {/* ================= MODAL 2: TERMS & TRAINING AGREEMENT ================= */}
+      {/* MODAL: TERMS */}
       {openTerms && (
         <div
           className='fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm'
@@ -324,28 +399,17 @@ export default function Footer() {
                 Thank you for choosing Good Dog Training. Our goal is to help
                 you build a calm, confident and lasting relationship with your
                 dog through practical, reward-based training that fits everyday
-                life. Every dog is different, and every owner has different
-                goals. Every training programme is tailored to the individual
-                needs of both the dog and the owner. This Agreement explains how
-                we work, what you can expect from us, and what we ask from you
-                throughout the training process. It also outlines the
-                responsibilities of both parties and the terms under which our
-                services are provided.
+                life. Every training programme is tailored to the individual
+                needs of both the dog and the owner.
               </p>
               <h4 className='font-semibold text-white/80'>
                 2. OUR TRAINING APPROACH
               </h4>
               <p>
                 Good Dog Training uses positive reinforcement methods based on
-                modern behavioural science. Our aim is to teach dogs what to do
-                rather than focusing on what not to do. We achieve this by
-                rewarding desired behaviour, building confidence, improving
-                communication, and creating positive learning experiences.
-                Training is not limited to lesson time. Dogs learn through
-                repetition and consistency in everyday life. Owner participation
-                and regular practice between sessions are essential. Every
-                programme is individually designed according to the dog&apos;s
-                temperament, experience, environment and the owner&apos;s goals.
+                modern behavioural science. Training is not limited to lesson
+                time. Owner participation and regular practice between sessions
+                are essential.
               </p>
               <h4 className='font-semibold text-white/80'>
                 3. OWNER RESPONSIBILITIES
@@ -354,8 +418,7 @@ export default function Footer() {
                 Successful training is a partnership. You agree to participate
                 in sessions, practise between sessions, follow the guidance
                 provided, use suitable equipment, and notify the trainer of any
-                difficulties. You understand that inconsistent practice may
-                significantly affect training progress.
+                difficulties.
               </p>
               <h4 className='font-semibold text-white/80'>
                 4. OUR RESPONSIBILITIES
@@ -373,8 +436,7 @@ export default function Footer() {
                 You confirm that all relevant behavioural and medical
                 information has been disclosed, including bite history,
                 aggression, fear, anxiety, injuries, medication or any other
-                matter affecting safety or training. You agree to notify Good
-                Dog Training of significant changes.
+                matter affecting safety or training.
               </p>
               <h4 className='font-semibold text-white/80'>
                 6. SAFETY DURING TRAINING
@@ -382,8 +444,7 @@ export default function Footer() {
               <p>
                 You agree to provide a safe environment during home visits,
                 supervise children, inform the trainer of other animals present
-                and follow reasonable safety instructions. Good Dog Training may
-                postpone, modify or end a session if safety is compromised.
+                and follow reasonable safety instructions.
               </p>
               <h4 className='font-semibold text-white/80'>
                 7. ASSUMPTION OF RISK
@@ -398,11 +459,8 @@ export default function Footer() {
               </h4>
               <p>
                 Good Dog Training will exercise reasonable care, skill and
-                professionalism. Except where caused by gross negligence or
-                wilful misconduct, Good Dog Training is not responsible for
-                injury, loss or damage arising from the inherent risks of dog
-                training. The owner remains legally responsible for the dog at
-                all times.
+                professionalism. The owner remains legally responsible for the
+                dog at all times.
               </p>
               <h4 className='font-semibold text-white/80'>
                 9. APPOINTMENTS & CANCELLATIONS
@@ -410,8 +468,7 @@ export default function Footer() {
               <p>
                 Please provide at least 24 hours notice to cancel or reschedule
                 a session. Late cancellations may be deducted from the training
-                package. If Good Dog Training must reschedule, an alternative
-                appointment will be offered.
+                package.
               </p>
               <h4 className='font-semibold text-white/80'>
                 10. PHOTOGRAPHY & PRIVACY
@@ -425,18 +482,16 @@ export default function Footer() {
                 11. CLIENT DECLARATION
               </h4>
               <p>
-                I confirm that I have read and understood this Agreement, had
-                the opportunity to ask questions, provided accurate information,
-                understand the inherent risks of dog training, understand that
-                no specific outcome can be guaranteed, remain legally
-                responsible for my dog, and voluntarily agree to these terms.
+                I confirm that I have read and understood this Agreement,
+                provided accurate information, understand the inherent risks of
+                dog training, and voluntarily agree to these terms.
               </p>
             </div>
           </div>
         </div>
       )}
 
-      {/* ================= MODAL 3: LIABILITY WAIVER (Dresersko ograđivanje) ================= */}
+      {/* MODAL: LIABILITY */}
       {openLiability && (
         <div
           className='fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm'
@@ -479,11 +534,11 @@ export default function Footer() {
                 2. Indemnification
               </h4>
               <p>
-                Good Dog Training (operated by The Good Dog Training FZ-LLC) and
-                its trainers are strictly exempted from any legal or financial
-                liability regarding property damage, personal injury, or
-                third-party claims caused by the client&apos;s dog during or
-                after the training program lifecycle.
+                Good Dog Training and its trainers are strictly exempted from
+                any legal or financial liability regarding property damage,
+                personal injury, or third-party claims caused by the
+                client&apos;s dog during or after the training program
+                lifecycle.
               </p>
               <h4 className='font-semibold text-white/80'>
                 3. Health & Vaccinations

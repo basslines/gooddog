@@ -4,23 +4,23 @@ import { useState } from 'react';
 const faqs = [
   {
     q: 'Do you train at my home?',
-    a: 'Yes. All training takes place in your home and in real-life environments where your dog lives and experiences everyday situations. This helps create lasting results that truly fit your lifestyle.',
+    a: 'Yes. All training takes place in your home and in real-life environments where your dog lives and experiences everyday situations. We provide our services throughout Abu Dhabi, including Al Raha Beach, Saadiyat Island, Al Reem Island, Yas Island and surrounding areas. This helps create lasting results that truly fit your lifestyle.',
   },
   {
     q: 'Do I need to be present during training?',
-    a: "Yes, and that's intentional. Your involvement is essential — you're the one who lives with your dog every day. I'll guide you through every technique so you can continue reinforcing good behaviour between sessions and long after training ends.",
+    a: "Yes, and that's intentional. Your involvement is essential — you're the one who lives with your dog every day. We’ll guide you through every technique so you can continue reinforcing good behaviour between sessions and long after training ends.",
   },
   {
     q: 'How many sessions will my dog need?',
-    a: "Every dog is different. After an initial assessment, I'll recommend a program tailored to your dog's specific needs, your goals, and your lifestyle. Some dogs make significant progress in just a few sessions; others benefit from a longer program.",
+    a: "Every dog is different. After an initial assessment, We’ll recommend a program tailored to your dog's specific needs, your goals, and your lifestyle. Some dogs make significant progress in just a few sessions, others benefit from a longer program.",
   },
   {
     q: 'Do you use positive reinforcement?',
-    a: 'Yes, exclusively. I use modern, science-based positive reinforcement methods — no choke chains, no shock collars, no punishment. Only clear communication, consistency, and reward-based techniques that build a strong relationship between you and your dog.',
+    a: 'Yes, exclusively. We use modern, science-based positive reinforcement methods — no choke chains, no shock collars, no punishment. Only clear communication, consistency, and reward-based techniques that build a strong relationship between you and your dog.',
   },
   {
     q: 'Can you help rescue and adopted dogs?',
-    a: 'Absolutely. Rescue dogs often need extra patience and a gentle approach, especially if they carry past trauma or anxiety. I have experience working with dogs from difficult backgrounds and will design a program that builds trust and confidence at a pace that suits your dog.',
+    a: 'Absolutely. Rescue dogs often need extra patience and a gentle approach, especially if they carry past trauma or anxiety. We have experience working with dogs from difficult backgrounds and will design a program that builds trust and confidence at a pace that suits your dog.',
   },
 ];
 
@@ -113,7 +113,7 @@ export default function FAQ() {
           color: '#1D1D1B',
           lineHeight: 1.1,
         }} className="mb-10 sm:mb-16">
-          Questions I Often Hear
+          Questions We Often Hear
         </h2>
 
         <div className="border-t" style={{ borderColor: '#e8e4dc' }}>
